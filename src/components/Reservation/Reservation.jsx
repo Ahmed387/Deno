@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { additems } from "../Redux/reservationslice";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import img1 from "../../../public/Tools.webp"; 
+import img1 from "../../../public/Tools.webp";
 import { unwrapResult } from "@reduxjs/toolkit";
 
 export default function Reservation() {
@@ -47,10 +47,9 @@ export default function Reservation() {
     try {
       const response = await dispatch(additems(values));
       const Result = unwrapResult(response);
-      console.log(Result);
+      // console.log(Result);
       toast.success("تم تسجيل الحجز بنجاح!");
 
-     
       setTimeout(() => {
         Navigate("/");
       }, 2600);
@@ -91,7 +90,7 @@ export default function Reservation() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "100vh",
-        padding: "20px", 
+        padding: "20px",
       }}
     >
       <div className="flex justify-center items-center mt-10">

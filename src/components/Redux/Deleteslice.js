@@ -13,10 +13,10 @@ export let deleteitem = createAsyncThunk(
           },
         }
       );
-      console.log(response?.data);
-      return id; 
+      // console.log(response?.data);
+      return id;
     } catch (error) {
-      console.log(error);
+      //  console.log(error);
       throw new Error(
         error?.response?.data || "Something went wrong in deleting the data"
       );

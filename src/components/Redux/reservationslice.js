@@ -14,10 +14,10 @@ export let additems = createAsyncThunk(
           },
         }
       );
-      console.log(response?.data);
+//      console.log(response?.data);
       return response?.data;
     } catch (error) {
-      console.log(error);
+      //      console.log(error);
       throw new Error(
         error?.response?.data || "Something went wrong in add a new data"
       );
