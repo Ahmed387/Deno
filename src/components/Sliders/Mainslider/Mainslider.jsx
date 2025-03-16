@@ -23,13 +23,6 @@ export default function Mainslider() {
       >
         <SwiperSlide>
           <img
-            src="/team.webp"
-            alt="Banner 1"
-            className={`${styles.swiperImage}`}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
             src="/شارع.webp"
             alt="Banner 2"
             className={`${styles.swiperImage}`}
