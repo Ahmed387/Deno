@@ -1,9 +1,7 @@
 import { FaLocationDot } from "react-icons/fa6";
-
 import { BsWhatsapp } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import { toast } from "react-toastify";
-import { useCallback } from "react";
 
 // مكون لتمثيل عنصر الاتصال
 const ContactItem = ({ icon, text, onClick, link }) => (
@@ -27,15 +25,17 @@ const ContactItem = ({ icon, text, onClick, link }) => (
 export default function ContactUs() {
   const phoneNumber = "1094394947";
 
-  const Whats = useCallback(() => {
+  // دالة WhatsApp بعد إزالة useCallback
+  const Whats = () => {
     const message = "مرحبًا، كيف يمكنني مساعدتك؟";
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
       "_blank"
     );
-  }, [phoneNumber]);
+  };
 
-  const copy = useCallback((text) => {
+  // دالة النسخ بعد إزالة useCallback
+  const copy = (text) => {
     navigator.clipboard
       .writeText(text)
       .then(() => {
@@ -44,7 +44,7 @@ export default function ContactUs() {
       .catch((err) => {
         toast.error("Failed to copy: " + err);
       });
-  }, []);
+  };
 
   return (
     <div className="flex justify-center items-center h-auto bg-gray-100 mt-10 w-full">

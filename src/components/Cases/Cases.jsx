@@ -37,6 +37,7 @@ export default function Cases() {
               className="h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter-none md:filter md:grayscale hover:grayscale-0"
               src={image.src}
               alt={image.alt}
+              loading="lazy"
             />
           ))}
         </div>

@@ -23,9 +23,18 @@ export default function Mainslider() {
       >
         <SwiperSlide>
           <img
+            src="/team.webp"
+            alt="Banner 2"
+            className={`${styles.swiperImage}`}
+            loading="lazy"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
             src="/شارع.webp"
             alt="Banner 2"
             className={`${styles.swiperImage}`}
+            loading="lazy"
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -33,6 +42,7 @@ export default function Mainslider() {
             src="/banner2.webp"
             alt="Banner 3"
             className={`${styles.swiperImage}`}
+            loading="lazy"
           />
         </SwiperSlide>
       </Swiper>
