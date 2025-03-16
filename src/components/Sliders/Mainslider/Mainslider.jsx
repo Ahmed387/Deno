@@ -27,7 +27,7 @@ export default function Mainslider() {
           <div className="border-4 border-gray-400 flex justify-center items-center text-white text-3xl">
             <h1>Ahmed Salah</h1>
           </div>
-          <img src="/تيم.jpg" alt="Banner 1" className={styles.swiperImage} />
+          <img src="/team.webp" alt="Banner 1" className={styles.swiperImage} />
         </SwiperSlide>
         <SwiperSlide>
           <div></div>
