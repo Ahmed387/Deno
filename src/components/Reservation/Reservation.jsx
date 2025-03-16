@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { additems } from "../Redux/reservationslice";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import img1 from "../../../public/Tools.webp";
+
 import { unwrapResult } from "@reduxjs/toolkit";
 
 export default function Reservation() {
@@ -86,7 +86,7 @@ export default function Reservation() {
     <div
       className="container mx-auto"
       style={{
-        backgroundImage: `url(${img1})`,
+        backgroundImage: `url(Tools.webp)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "100vh",
