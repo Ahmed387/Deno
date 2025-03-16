@@ -25,7 +25,7 @@ export default function Mainslider() {
       >
         <SwiperSlide>
           <div
-            className={` flex justify-center items-center text-white text-3xl`}
+            className={`border-4 border-gray-400 flex justify-center items-center text-white text-3xl`}
           >
             <h1>Ahmed Salah</h1>
           </div>

@@ -64,12 +64,12 @@ export default function Ourservice() {
 
   return (
     <>
-      <div className="flex justify-center items-center my-10">
+      <div className="flex justify-center items-center my-10 ">
         <h2 className="text-3xl md:text-4xl bg-blue-500 font-bold text-white px-4 py-2 rounded-lg shadow-lg">
           Our Services
         </h2>
       </div>
-      <div className="border-b-2 border-gray-300 p-8 container mb-16 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 md:px-6 lg:px-8">
+      <div className="border-b-4 border-red-600 my-10  container  mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 md:px-6 lg:px-8">
         {services.map((service, index) => (
           <div
             key={index}

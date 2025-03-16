@@ -48,12 +48,12 @@ export default function Footer() {
                 alt="Maadi Dental Center"
                 className="h-12 w-12 rounded-full"
               />
-              <h1 className="text-2xl font-semibold text-center sm:text-left">
-                Maadi Dental Center{" "}
-                <h2 className="text-sm font-light">
-                  Professional and Advanced Care
-                </h2>
-              </h1>
+              <p className="text-2xl font-semibold text-center sm:text-left">
+                Maadi Dental Center
+              </p>
+              <span className="text-sm font-light">
+                Professional and Advanced Care
+              </span>
             </div>
             <p className="mt-4 text-gray-300 text-sm">
               Maadi Dental Center provides high-quality, personalized dental
@@ -72,6 +72,7 @@ export default function Footer() {
             </p>
           </div>
 
+          {/* Our Services Section */}
           <div className="flex flex-col justify-between items-start sm:items-center sm:w-1/3 w-full mb-6">
             <h3 className="text-xl font-semibold text-cyan-400 mx-auto">
               Our Services
@@ -87,8 +88,9 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Contact Section */}
           <div className="flex flex-col justify-between items-start sm:items-start sm:w-1/3 w-full mb-6">
-            <h3 className="text-xl font-semibold text-cyan-400 mx-auto sm:mx-0 ">
+            <h3 className="text-xl font-semibold text-cyan-400 mx-auto sm:mx-0">
               Contact Us
             </h3>
             <ul className="mt-4 space-y-2 text-gray-300">

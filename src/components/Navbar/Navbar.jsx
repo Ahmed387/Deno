@@ -53,7 +53,7 @@ function Navbar() {
               <div className="flex justify-center  items-center  flex-row gap-6 cursor-pointer">
                 <BsWhatsapp
                   onClick={Whats}
-                  size={36}
+                  size={32}
                   title="Click to chat on WhatsApp"
                   className="text-green-600"
                 />
@@ -61,7 +61,7 @@ function Navbar() {
                 <FcPhoneAndroid
                   onClick={() => copy(phoneNumber)}
                   title="Click to copy phone number"
-                  size={36}
+                  size={32}
                   className="text-blue-500"
                 />
 
@@ -71,7 +71,7 @@ function Navbar() {
                   rel="noopener noreferrer"
                 >
                   <FaInstagram
-                    size={36}
+                    size={32}
                     className="text-[#F501CB]"
                     title="Go to Instagram"
                   />
@@ -118,11 +118,11 @@ function Navbar() {
             className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
             id="navbar-cta"
           >
-            <ul className="flex flex-col text-2xl font-semibold p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="flex flex-col text-xl font-mono p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
                 <Link
                   to={"/"}
-                  className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block px-3 md:p-0 text-gray-900 rounded-sm hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Home
                 </Link>
@@ -130,7 +130,7 @@ function Navbar() {
               <li>
                 <Link
                   to={"/ourteam"}
-                  className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block  px-3 md:p-0 text-gray-900 rounded-sm hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Our Team
                 </Link>
@@ -138,7 +138,7 @@ function Navbar() {
               <li>
                 <Link
                   to={"/ourservice"}
-                  className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block  px-3 md:p-0 text-gray-900 rounded-sm hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Services
                 </Link>
@@ -146,7 +146,7 @@ function Navbar() {
               <li>
                 <Link
                   to={"/reservation"}
-                  className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block  px-3 md:p-0 text-gray-900 rounded-sm hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Reservation
                 </Link>
@@ -155,7 +155,7 @@ function Navbar() {
               <li>
                 <Link
                   to={"/contactus"}
-                  className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block  px-3 md:p-0 text-gray-900 rounded-sm hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Contact
                 </Link>
