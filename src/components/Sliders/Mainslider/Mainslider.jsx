@@ -24,19 +24,17 @@ export default function Mainslider() {
         className={styles.mySwiper}
       >
         <SwiperSlide>
-          <div
-            className={`border-4 border-gray-400 flex justify-center items-center text-white text-3xl`}
-          >
+          <div className="border-4 border-gray-400 flex justify-center items-center text-white text-3xl">
             <h1>Ahmed Salah</h1>
           </div>
-          <img src="/تيم.webp" alt="Banner 1" className={styles.swiperImage} />
+          <img src="/تيم.jpg" alt="Banner 1" className={styles.swiperImage} />
         </SwiperSlide>
         <SwiperSlide>
           <div></div>
           <img
             src="/شارع.webp"
             alt="Banner 2"
-            className={`${styles.swiperImage} `}
+            className={`${styles.swiperImage}`}
           />
         </SwiperSlide>
         <SwiperSlide>
