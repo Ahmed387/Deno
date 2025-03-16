@@ -21,6 +21,18 @@
   object-fit: cover; /* Ensure the image covers the container without distortion */
 }
 
+/* إزالة أي تأثير للأسهم في الـ CSS */
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
+/* إخفاء الـ pseudo-elements الخاصة بالأسهم (إذا كانت تستخدم) */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+}
+
 /* Additional styling for background overlay */
 .bgoverlay {
   position: absolute;

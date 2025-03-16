@@ -3,11 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 import styles from "./Mainslider.module.css";
 
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules"; // فقط الـ Pagination بدون الـ Navigation
 
 export default function Mainslider() {
   return (
@@ -19,22 +18,26 @@ export default function Mainslider() {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination]} // تم إزالة الـ Navigation هنا
         className={styles.mySwiper}
       >
         <SwiperSlide>
           <div className="border-4 border-gray-400 flex justify-center items-center text-white text-3xl">
             <h1>Ahmed Salah</h1>
           </div>
-          <img src="/team.webp" alt="Banner 1" className={styles.swiperImage} />
+          <img
+            src="/team.webp"
+            alt="Banner 1"
+            className={`${styles.swiperImage}`}
+            loading="lazy"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <div></div>
           <img
             src="/شارع.webp"
             alt="Banner 2"
             className={`${styles.swiperImage}`}
+            loading="lazy"
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -42,7 +45,8 @@ export default function Mainslider() {
           <img
             src="/banner2.webp"
             alt="Banner 3"
-            className={styles.swiperImage}
+            className={`${styles.swiperImage}`}
+            loading="lazy"
           />
         </SwiperSlide>
       </Swiper>
