@@ -4,7 +4,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import { FcPhoneAndroid } from "react-icons/fc";
 import { Link } from "react-router-dom";
-import logo from "../../../public/logo.webp";
+
 import { FaLocationDot } from "react-icons/fa6";
 function Navbar() {
   const phoneNumber = 1094394947;
@@ -14,7 +14,6 @@ function Navbar() {
     setisopen((prevstate) => !prevstate);
   }
 
- 
   const Whats = () => {
     const message = "مرحبًا، كيف يمكنني مساعدتك؟";
     window.open(
@@ -23,7 +22,6 @@ function Navbar() {
     );
   };
 
- 
   function copy(text) {
     navigator.clipboard
       .writeText(text)
@@ -43,28 +41,30 @@ function Navbar() {
             to={"/"}
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img src={logo} className="w-24 h-24 rounded-full" alt=" Logo" />
-       
+            <img
+              src="/logo.webp"
+              className="w-24 h-24 rounded-full"
+              alt=" Logo"
+              loading="lazy"
+            />
           </Link>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse  ">
-   
             <div>
               <div className="flex justify-center  items-center  flex-row gap-6 cursor-pointer">
-         
                 <BsWhatsapp
                   onClick={Whats}
                   size={36}
                   title="Click to chat on WhatsApp"
                   className="text-green-600"
                 />
-            
+
                 <FcPhoneAndroid
                   onClick={() => copy(phoneNumber)}
                   title="Click to copy phone number"
                   size={36}
                   className="text-blue-500"
                 />
-           
+
                 <a
                   href="https://www.instagram.com/fly.dent.dental.clinic?igsh=MTg4dDdqMHlnaGZ0aA=="
                   target="_blank"
@@ -86,7 +86,7 @@ function Navbar() {
                 </a>
               </div>
             </div>
-   
+
             <button
               onClick={togglemenue}
               data-collapse-toggle="navbar-cta"

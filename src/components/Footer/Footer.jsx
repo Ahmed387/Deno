@@ -1,5 +1,4 @@
 import { FaInstagram } from "react-icons/fa";
-import op3 from "../../../public/logo.webp";
 import { Link } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
 import { toast } from "react-toastify";
@@ -18,7 +17,6 @@ export default function Footer() {
 
   const phoneNumber = 1094394947;
 
-  
   const Whats = () => {
     const message = "مرحبًا، كيف يمكنني مساعدتك؟";
     window.open(
@@ -27,7 +25,6 @@ export default function Footer() {
     );
   };
 
- 
   function copy(text) {
     navigator.clipboard
       .writeText(text)
@@ -47,7 +44,7 @@ export default function Footer() {
           <div className="flex flex-col justify-start mt-12 sm:mt-0 sm:w-1/3 w-full mb-6 border-4 border-black">
             <div className="flex items-center space-x-2">
               <img
-                src={op3}
+                src="/logo.webp"
                 alt="Maadi Dental Center"
                 className="h-12 w-12 rounded-full"
               />
@@ -75,7 +72,6 @@ export default function Footer() {
             </p>
           </div>
 
-      
           <div className="flex flex-col justify-between items-start sm:items-center sm:w-1/3 w-full mb-6">
             <h3 className="text-xl font-semibold text-cyan-400 mx-auto">
               Our Services
@@ -91,7 +87,6 @@ export default function Footer() {
             </ul>
           </div>
 
-     
           <div className="flex flex-col justify-between items-start sm:items-start sm:w-1/3 w-full mb-6">
             <h3 className="text-xl font-semibold text-cyan-400 mx-auto sm:mx-0 ">
               Contact Us

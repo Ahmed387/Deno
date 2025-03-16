@@ -1,11 +1,13 @@
-import case1 from "../../../public/case1.webp";
-import case2 from "../../../public/case2.webp";
-import case3 from "../../../public/case3.Webp";
-import case4 from "../../../public/case4.Webp";
-import case5 from "../../../public/case5.Webp";
-import case6 from "../../../public/case6.Webp";
-
 export default function Cases() {
+  const caseImages = [
+    { src: "/case2.webp", alt: "Case 2" },
+    { src: "/case1.webp", alt: "Case 1" },
+    { src: "/case6.webp", alt: "Case 6" },
+    { src: "/case3.webp", alt: "Case 3" },
+    { src: "/case4.webp", alt: "Case 4" },
+    { src: "/case5.webp", alt: "Case 5" },
+  ];
+
   return (
     <>
       <div className="flex justify-center items-center mt-10">
@@ -14,41 +16,29 @@ export default function Cases() {
         </span>
       </div>
 
-      <div className="flex justify-center items-center gap-6 flex-wrap border-gray-300 p-8 border-b-2 ">
+      <div className="flex justify-center items-center gap-6 flex-wrap border-gray-300 p-8 border-b-2">
+        {/* Grouping the first set of images */}
         <div className="flex justify-center items-center gap-6 flex-wrap">
-          <img
-            className="h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter-none md:filter md:grayscale hover:grayscale-0"
-            src={case2}
-            alt="Case 2"
-          />
-          <img
-            className="h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter-none md:filter md:grayscale hover:grayscale-0"
-            src={case1}
-            alt="Case 1"
-          />
-          <img
-            className="h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter-none md:filter md:grayscale hover:grayscale-0"
-            src={case6}
-            alt="Case 6"
-          />
-          <img
-            className="h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter-none md:filter md:grayscale hover:grayscale-0"
-            src={case3}
-            alt="Case 3"
-          />
+          {caseImages.slice(0, 4).map((image, index) => (
+            <img
+              key={index}
+              className="h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter-none md:filter md:grayscale hover:grayscale-0"
+              src={image.src}
+              alt={image.alt}
+            />
+          ))}
         </div>
 
+        {/* Grouping the second set of images */}
         <div className="flex justify-center items-center gap-6 flex-wrap">
-          <img
-            className="h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter-none md:filter md:grayscale hover:grayscale-0"
-            src={case4}
-            alt="Case 4"
-          />
-          <img
-            className="h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter-none md:filter md:grayscale hover:grayscale-0"
-            src={case5}
-            alt="Case 5"
-          />
+          {caseImages.slice(4).map((image, index) => (
+            <img
+              key={index}
+              className="h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter-none md:filter md:grayscale hover:grayscale-0"
+              src={image.src}
+              alt={image.alt}
+            />
+          ))}
         </div>
       </div>
     </>

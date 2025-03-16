@@ -1,7 +1,4 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import img3 from "../../../../public/banner2.webp";
-import img2 from "../../../../public/شارع.webp";
-import img1 from "../../../../public/تيم.webp";
 
 // Import Swiper styles
 import "swiper/css";
@@ -28,19 +25,27 @@ export default function Mainslider() {
       >
         <SwiperSlide>
           <div
-            className={`${styles.bgoverlay} flex justify-center items-center text-white text-3xl`}
+            className={` flex justify-center items-center text-white text-3xl`}
           >
             <h1>Ahmed Salah</h1>
           </div>
-          <img src={img1} alt="Banner 1" className={styles.swiperImage} />
+          <img src="/تيم.webp" alt="Banner 1" className={styles.swiperImage} />
         </SwiperSlide>
         <SwiperSlide>
-          <div className={styles.bgoverlay}></div>
-          <img src={img2} alt="Banner 2" className={`${styles.swiperImage} `} />
+          <div></div>
+          <img
+            src="/شارع.webp"
+            alt="Banner 2"
+            className={`${styles.swiperImage} `}
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <div className={styles.bgoverlay}></div>
-          <img src={img3} alt="Banner 3" className={styles.swiperImage} />
+          <div></div>
+          <img
+            src="/banner2.webp"
+            alt="Banner 3"
+            className={styles.swiperImage}
+          />
         </SwiperSlide>
       </Swiper>
     </>

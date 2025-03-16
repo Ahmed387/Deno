@@ -1,74 +1,61 @@
-
-import img1 from "../../../public/medical8.webp";
-import img2 from "../../../public/medical9.webp";
-import img3 from "../../../public/dental.webp";
-import img5 from "../../../public/dentist.webp";
-import img6 from "../../../public/dentist1.webp";
-import img7 from "../../../public/root.webp";
-import img8 from "../../../public/teeth.webp";
-import img9 from "../../../public/tooth.webp";
-import img10 from "../../../public/tooth1.webp";
-import img11 from "../../../public/tooth2.webp";
-
 export default function Ourservice() {
-
   const services = [
     {
-      img: img3,
+      img: "/dental.webp",
       title: "Cosmetic Dentistry",
       description:
         "Enhance your smile by reshaping or recoloring teeth that are too big, small, or crooked.",
     },
     {
-      img: img1,
+      img: "/medical8.webp",
       title: "Implants",
       description:
         "We will help you replace missing teeth, provide a long-term solution, slow down bone loss, and preserve relevant healthy teeth.",
     },
     {
-      img: img2,
+      img: "/medical9.webp",
       title: "Orthodontics (Braces)",
       description:
         "Braces have come a long way since we started. Our team is introducing modern solutions.",
     },
     {
-      img: img5,
+      img: "/dentist.webp",
       title: "CEREC",
       description:
         "With the new CEREC CAD/CAM technology, you can now receive all ceramic crowns and fillings in the same day.",
     },
     {
-      img: img9,
+      img: "/tooth.webp",
       title: "Periodontal Therapy",
       description:
         "Avoid gum bleeding and abscess formation with WATERLASE laser technology.",
     },
     {
-      img: img10,
+      img: "/tooth1.webp",
       title: "Root Canal Treatment",
       description:
         "Treat root canals in a single visit and maintain healthy teeth while preventing jaw problems.",
     },
     {
-      img: img7,
+      img: "/root.webp",
       title: "Oral Surgeries",
       description:
         "Our oral surgery team handles all surgical tasks with professionalism and expertise.",
     },
     {
-      img: img8,
+      img: "/teeth.webp",
       title: "Dentistry for Children",
       description:
         "We create a child-friendly atmosphere to keep our young patients comfortable.",
     },
     {
-      img: img11,
+      img: "/dentist1.webp",
       title: "Restorative Dentistry",
       description:
         "Restore missing, decayed, or damaged teeth with top-class restorative dentistry.",
     },
     {
-      img: img6,
+      img: "/tooth2.webp",
       title: "Digital Radiography",
       description:
         "We use the latest digital X-ray imaging system for dental diagnostics.",
@@ -83,7 +70,6 @@ export default function Ourservice() {
         </h2>
       </div>
       <div className="border-b-2 border-gray-300 p-8 container mb-16 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 md:px-6 lg:px-8">
-   
         {services.map((service, index) => (
           <div
             key={index}

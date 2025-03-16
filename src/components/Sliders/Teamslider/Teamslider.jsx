@@ -1,26 +1,21 @@
-import img5 from "../../../../public/one.webp";
-import img1 from "../../../../public/two.webp";
-import img2 from "../../../../public/three.webp";
-
-
 const teamData = [
   {
     name: "DR HISHAM AZIM",
     title: "Associate Professor - Oral & Maxillofacial Surgery",
     details: "Faculty of Dentistry, Cairo University",
-    img: img1,
+    img: "/two.webp",
   },
   {
     name: "DR Dena Ahmed",
     title: "Associate Professor - Oral & Maxillofacial Surgery",
     details: "Faculty of Dentistry, Cairo University",
-    img: img5,
+    img: "/one.webp",
   },
   {
     name: "DR Asmaa Elshinnawy",
     title: "Associate Professor - Oral & Maxillofacial Surgery",
     details: "Faculty of Dentistry, Cairo University",
-    img: img2,
+    img: "/three.webp",
   },
 ];
 
