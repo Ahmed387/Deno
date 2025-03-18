@@ -4,10 +4,12 @@ import Navbar from "../Navbar/Navbar";
 
 export default function Layout() {
   return (
-    <div className="   min-h-screen flex flex-col">
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </div>
+    <>
+      <div className="flex flex-col">
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </div>
+    </>
   );
 }

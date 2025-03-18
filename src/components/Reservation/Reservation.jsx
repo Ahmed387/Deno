@@ -65,7 +65,7 @@ export default function Reservation() {
       age: "",
       bookingDate: "",
       phoneNumber: "",
-      toggle: "",
+      toggle: "false",
       whatsApp: "",
       email: "",
       detials: "",
@@ -175,7 +175,7 @@ export default function Reservation() {
           )}
         </div>
 
-        <div className="mb-6">
+        {/* <div className="mb-6">
           <label className="block text-sm font-medium text-gray-700">
             Have you visited before?
           </label>
@@ -212,7 +212,7 @@ export default function Reservation() {
               {formik.errors.toggle}
             </div>
           )}
-        </div>
+        </div> */}
 
         <div className="mb-6">
           <label

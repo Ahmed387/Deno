@@ -47,9 +47,15 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="flex justify-center items-center h-auto bg-gray-100 mt-10 w-full">
-      <div className="flex bg-white shadow-2xl rounded-lg overflow-hidden my-14 w-full">
-        <div className="w-full sm:w-1/2">
+    <>
+      <div className="flex justify-center items-center mt-10">
+        <span className="text-3xl md:text-4xl my-10 bg-blue-500 font-bold text-white px-4 py-2 rounded-lg shadow-lg">
+          Contact US{" "}
+        </span>
+      </div>
+
+      <div className="flex  justify-center items-center flex-col md:flex-row bg-white shadow-2xl rounded-lg overflow-hidden my-14 w-full">
+        <div className="w-full">
           <img
             src="/IMG_4431_6_11zon.webp"
             alt="Shiny White Clinic"
@@ -58,11 +64,7 @@ export default function ContactUs() {
           />
         </div>
 
-        <div className="w-full sm:w-1/2 p-8">
-          <h2 className="text-3xl mx-auto text-center font-semibold text-blue-500 mb-10">
-            Contact Information
-          </h2>
-
+        <div className="p-8">
           <div className="flex flex-col justify-center items-center gap-4">
             <ul className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6 text-black">
               {/* Left Section with 2 li items */}
@@ -100,6 +102,6 @@ export default function ContactUs() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
