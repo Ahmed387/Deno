@@ -3,8 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+
 import styles from "./Mainslider.module.css";
+
 import { Pagination } from "swiper/modules"; // فقط الـ Pagination بدون الـ Navigation
+
 export default function Mainslider() {
   return (
     <>
@@ -43,7 +46,7 @@ export default function Mainslider() {
           />
         </SwiperSlide>
       </Swiper>
-      {/* sss */}
+      {/* ssssa */}
     </>
   );
 }
