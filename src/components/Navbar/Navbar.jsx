@@ -5,19 +5,29 @@ import { FaInstagram } from "react-icons/fa";
 import { FcPhoneAndroid } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  toggleLanguage,
+  selectLanguage,
+} from "../../redux/features/languageSlice";
+import { useTranslation } from "../../hooks/useTranslation";
 
 function Navbar() {
   const phoneNumber = 1094394947;
   const [isopen, setisopen] = useState(false);
+  const language = useSelector(selectLanguage);
+  const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   function toggleMenu() {
     setisopen((prevState) => !prevState);
   }
 
   const Whats = () => {
-    const message = "مرحبًا، كيف يمكنني مساعدتك؟";
     window.open(
-      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+        t("whatsappMessage")
+      )}`,
       "_blank"
     );
   };
@@ -26,7 +36,7 @@ function Navbar() {
     navigator.clipboard
       .writeText(text)
       .then(() => {
-        toast.success("Successfully Copied!");
+        toast.success(t("copySuccess"));
       })
       .catch((err) => {
         toast.error(err);
@@ -52,6 +62,15 @@ function Navbar() {
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <div>
               <div className="flex justify-center items-center flex-row gap-6 cursor-pointer">
+                <button
+                  onClick={() => dispatch(toggleLanguage())}
+                  className="px-3 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors"
+                  title={
+                    language === "en" ? "Switch to Arabic" : "Switch to English"
+                  }
+                >
+                  {language === "en" ? "AR" : "EN"}
+                </button>
                 <BsWhatsapp
                   onClick={Whats}
                   size={32}
@@ -94,7 +113,7 @@ function Navbar() {
               aria-controls="navbar-cta"
               aria-expanded={`${isopen ? "true" : "false"}`}
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">{t("openMenu")}</span>
               <svg
                 className="w-5 h-5"
                 aria-hidden="true"
@@ -125,7 +144,7 @@ function Navbar() {
                   to={"/"}
                   className="block px-3 md:p-0 text-gray-900 rounded-sm hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
-                  Home
+                  {t("home")}
                 </Link>
               </li>
               <li>
@@ -133,7 +152,7 @@ function Navbar() {
                   to={"/ourteam"}
                   className="block px-3 md:p-0 text-gray-900 rounded-sm hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
-                  Our Team
+                  {t("ourTeam")}
                 </Link>
               </li>
               <li>
@@ -141,7 +160,7 @@ function Navbar() {
                   to={"/ourservice"}
                   className="block px-3 md:p-0 text-gray-900 rounded-sm hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
-                  Services
+                  {t("services")}
                 </Link>
               </li>
               <li>
@@ -149,7 +168,7 @@ function Navbar() {
                   to={"/reservation"}
                   className="block px-3 md:p-0 text-gray-900 rounded-sm hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
-                  Reservation
+                  {t("reservation")}
                 </Link>
               </li>
               <li>
@@ -157,7 +176,7 @@ function Navbar() {
                   to={"/contactus"}
                   className="block px-3 md:p-0 text-gray-900 rounded-sm hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
-                  Contact
+                  {t("contact")}
                 </Link>
               </li>
             </ul>

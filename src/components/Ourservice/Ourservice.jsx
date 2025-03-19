@@ -1,64 +1,57 @@
+import { useTranslation } from "../../hooks/useTranslation"; // استيراد الدالة الخاصة بالترجمة
+
 export default function Ourservice() {
+  const { t } = useTranslation(); // استخدام الترجمة من hook
   const services = [
     {
       img: "/dental.webp",
-      title: "Cosmetic Dentistry",
-      description:
-        "Enhance your smile by reshaping or recoloring teeth that are too big, small, or crooked.",
+      title: t("cosmeticDentistry"), // استخدام الترجمة
+      description: t("cosmeticDentistryDescription"),
     },
     {
       img: "/medical8.webp",
-      title: "Implants",
-      description:
-        "We will help you replace missing teeth, provide a long-term solution, slow down bone loss, and preserve relevant healthy teeth.",
+      title: t("implants"),
+      description: t("implantsDescription"),
     },
     {
       img: "/medical9.webp",
-      title: "Orthodontics (Braces)",
-      description:
-        "Braces have come a long way since we started. Our team is introducing modern solutions.",
+      title: t("orthodontics"),
+      description: t("orthodonticsDescription"),
     },
     {
       img: "/dentist.webp",
-      title: "CEREC",
-      description:
-        "With the new CEREC CAD/CAM technology, you can now receive all ceramic crowns and fillings in the same day.",
+      title: t("cerec"),
+      description: t("cerecDescription"),
     },
     {
       img: "/tooth.webp",
-      title: "Periodontal Therapy",
-      description:
-        "Avoid gum bleeding and abscess formation with WATERLASE laser technology.",
+      title: t("periodontalTherapy"),
+      description: t("periodontalTherapyDescription"),
     },
     {
       img: "/tooth1.webp",
-      title: "Root Canal Treatment",
-      description:
-        "Treat root canals in a single visit and maintain healthy teeth while preventing jaw problems.",
+      title: t("rootCanalTreatment"),
+      description: t("rootCanalTreatmentDescription"),
     },
     {
       img: "/root.webp",
-      title: "Oral Surgeries",
-      description:
-        "Our oral surgery team handles all surgical tasks with professionalism and expertise.",
+      title: t("oralSurgeries"),
+      description: t("oralSurgeriesDescription"),
     },
     {
       img: "/teeth.webp",
-      title: "Dentistry for Children",
-      description:
-        "We create a child-friendly atmosphere to keep our young patients comfortable.",
+      title: t("dentistryForChildren"),
+      description: t("dentistryForChildrenDescription"),
     },
     {
       img: "/dentist1.webp",
-      title: "Restorative Dentistry",
-      description:
-        "Restore missing, decayed, or damaged teeth with top-class restorative dentistry.",
+      title: t("restorativeDentistry"),
+      description: t("restorativeDentistryDescription"),
     },
     {
       img: "/tooth2.webp",
-      title: "Digital Radiography",
-      description:
-        "We use the latest digital X-ray imaging system for dental diagnostics.",
+      title: t("digitalRadiography"),
+      description: t("digitalRadiographyDescription"),
     },
   ];
 
@@ -66,10 +59,10 @@ export default function Ourservice() {
     <>
       <div className="flex justify-center items-center my-10 ">
         <h2 className="text-3xl md:text-4xl bg-blue-500 font-bold text-white px-4 py-2 rounded-lg shadow-lg">
-          Our Services
+          {t("ourServices")}
         </h2>
       </div>
-      <div className="border-b-4 border-red-600 my-10  container  mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 md:px-6 lg:px-8">
+      <div className="border-b-4 border-red-600 my-10 container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 md:px-6 lg:px-8">
         {services.map((service, index) => (
           <div
             key={index}

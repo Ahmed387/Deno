@@ -1,3 +1,5 @@
+import { useTranslation } from "../../../hooks/useTranslation"; // استيراد useTranslation
+
 const teamData = [
   {
     name: "DR HISHAM AZIM",
@@ -20,11 +22,13 @@ const teamData = [
 ];
 
 export default function Teamslider() {
+  const { t } = useTranslation(); // استخدام الترجمة
+
   return (
     <>
-      <div className="flex justify-center items-center mt-10">
-        <span className="text-3xl md:text-4xl my-10 bg-blue-500 font-bold text-white px-4 py-2 rounded-lg shadow-lg">
-          Our Team
+      <div className="flex justify-center items-center my-10">
+        <span className="text-3xl md:text-4xl  bg-blue-500 font-bold text-white px-4 py-2 rounded-lg shadow-lg">
+          {t("ourTeam")} {/* استخدام الترجمة */}
         </span>
       </div>
       <div className="container mx-auto px-4 border-b-2 border-gray-300 p-8">
@@ -45,13 +49,13 @@ export default function Teamslider() {
               </div>
               <div className="p-5">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-blue-700 dark:text-white">
-                  {member.name}
+                  {t(member.name)} {/* الترجمة لاسم العضو */}
                 </h5>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  {member.title}
+                  {t(member.title)} {/* الترجمة للمسمى الوظيفي */}
                 </p>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  {member.details}
+                  {t(member.details)} {/* الترجمة للتفاصيل */}
                 </p>
               </div>
             </div>

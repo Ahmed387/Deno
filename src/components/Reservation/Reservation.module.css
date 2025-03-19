@@ -1,3 +1,8 @@
 .D[disabled] {
   background-color: rgba(0, 0, red, 0.6);
 }
+/* This makes the placeholder background transparent */
+input::placeholder,
+textarea::placeholder {
+  background-color: transparent;
+}

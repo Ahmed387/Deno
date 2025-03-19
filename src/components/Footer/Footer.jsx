@@ -3,22 +3,24 @@ import { Link } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
 import { toast } from "react-toastify";
 import { BsWhatsapp } from "react-icons/bs";
+import { useTranslation } from "../../hooks/useTranslation"; // استيراد useTranslation
 
 export default function Footer() {
+  const { t } = useTranslation(); // استخدام الترجمة
   const pages = [
-    { name: "Home", path: "/" },
-    { name: "Our Service", path: "/ourservice" },
-    { name: "Our Team", path: "/ourteam" },
-    { name: "Our Clinic", path: "/ourbranches" },
-    { name: "Our Cases", path: "/cases" },
-    { name: "Reservation", path: "/reservation" },
-    { name: "Contact", path: "/contactus" },
+    { name: t("home"), path: "/" },
+    { name: t("ourService"), path: "/ourservice" },
+    { name: t("ourTeam"), path: "/ourteam" },
+    { name: t("ourClinic"), path: "/ourbranches" },
+    { name: t("ourCases"), path: "/cases" },
+    { name: t("reservation"), path: "/reservation" },
+    { name: t("contact"), path: "/contactus" },
   ];
 
-  const phoneNumber = 1094394947;
+  const phoneNumber = "1094394947";
 
   const Whats = () => {
-    const message = "مرحبًا، كيف يمكنني مساعدتك؟";
+    const message = t("whatsappMessage");
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
       "_blank"
@@ -29,7 +31,7 @@ export default function Footer() {
     navigator.clipboard
       .writeText(text)
       .then(() => {
-        toast.success("Successfully Copied!");
+        toast.success(t("copySuccess"));
       })
       .catch((err) => {
         toast.error(err);
@@ -42,40 +44,33 @@ export default function Footer() {
         <div className="flex flex-col w-full mt-10 sm:flex-row justify-between items-center gap-10 sm:gap-10 px-5">
           {/* Left Section */}
           <div className="flex flex-col justify-start mt-12 sm:mt-0 sm:w-1/3 w-full mb-6 border-4 border-black">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 gap-3">
               <img
                 src="/logo.webp"
                 alt="Maadi Dental Center"
-                className="h-12 w-12 rounded-full"
+                className="h-10 w-10 md:w-14 md:h-14  rounded-full"
               />
-              <p className="text-2xl font-semibold text-center sm:text-left">
-                Maadi Dental Center
-              </p>
-              <span className="text-sm font-light">
-                Professional and Advanced Care
-              </span>
+              <div className="flex justify-center items-center flex-col md:flex-row">
+                <p className="text-2xl font-semibold text-center sm:text-left">
+                  {t("maadiDentalCenter")}
+                </p>
+                <span className="text-sm text-gray-500 font-light">
+                  {t("professionalCare")}
+                </span>
+              </div>
             </div>
             <p className="mt-4 text-gray-300 text-sm">
-              Maadi Dental Center provides high-quality, personalized dental
-              care with advanced technology like CEREC CAD/CAM for same-day
-              crowns and Waterlase MD™ for reduced anesthesia needs. Led by
-              expert professionals such as Dr. Hisham Azim, Dr. Dena Ahmed, and
-              Dr. Asmaa Elshinnawy, the clinic specializes in oral and
-              maxillofacial surgery.
+              {t("dentalCenterDescription")}
             </p>
             <p className="mt-4 text-gray-300 text-sm">
-              The center ensures patient comfort with a relaxing environment,
-              strict hygiene standards, and head-mounted digital screen glasses
-              for entertainment during treatment. Maadi Dental Center offers a
-              wide range of services, including preventive care, restorative
-              treatments, and orthodontics.
+              {t("comfortAndHygieneDescription")}
             </p>
           </div>
 
           {/* Our Services Section */}
           <div className="flex flex-col justify-between items-start sm:items-center sm:w-1/3 w-full mb-6">
             <h3 className="text-xl font-semibold text-cyan-400 mx-auto">
-              Our Services
+              {t("ourServices")}
             </h3>
             <ul className="mt-4 space-y-2 text-gray-300">
               {pages.map((page) => (
@@ -91,7 +86,7 @@ export default function Footer() {
           {/* Contact Section */}
           <div className="flex flex-col justify-between items-start sm:items-start sm:w-1/3 w-full mb-6">
             <h3 className="text-xl font-semibold text-cyan-400 mx-auto sm:mx-0">
-              Contact Us
+              {t("contactUs")}
             </h3>
             <ul className="mt-4 space-y-2 text-gray-300">
               <li
@@ -99,7 +94,7 @@ export default function Footer() {
                 onClick={() => copy(phoneNumber)}
               >
                 <span className="mr-2 text-2xl">📞</span>
-                <span>+20 1094394947</span>
+                <span>+20 {phoneNumber}</span>
               </li>
               <li className="flex items-center">
                 <span className="mr-2 text-2xl">📧</span>
@@ -113,16 +108,16 @@ export default function Footer() {
                   className="flex items-center hover:text-cyan-400"
                 >
                   <FaInstagram size={30} className="mr-2" />
-                  Instagram
+                  {t("instagram")}
                 </a>
               </li>
               <li onClick={Whats} className="flex items-center">
                 <BsWhatsapp
                   size={30}
-                  title="Click to chat on WhatsApp"
+                  title={t("whatsappTitle")}
                   className="text-green-600"
                 />
-                <span className="text-xl">WhatsApp</span>
+                <span className="text-xl">{t("whatsapp")}</span>
               </li>
               <li className="flex items-center">
                 <a
@@ -132,7 +127,7 @@ export default function Footer() {
                   className="flex items-center hover:text-cyan-400"
                 >
                   <FaLocationDot size={30} className="mr-2" />
-                  <span className="text-xl">Location</span>
+                  <span className="text-xl">{t("location")}</span>
                 </a>
               </li>
             </ul>
@@ -141,7 +136,7 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="my-5 flex justify-center items-center border-t border-gray-700 pt-5 text-white font-light">
-          <p>All rights reserved in 2025. Created by A.s</p>
+          <p>{t("footerText")}</p>
         </div>
       </footer>
     </>

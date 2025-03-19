@@ -12,6 +12,8 @@ import Ourservice from "./components/Ourservice/Ourservice";
 import ContactUs from "./components/ContactUs/ContactUs";
 import "react-toastify/dist/ReactToastify.css"; // استيراد تنسيق الـ CSS
 import Cases from "./components/Cases/Cases";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 const router = createBrowserRouter([
   {
@@ -65,11 +67,13 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <RouterProvider router={router} />
+    <Provider store={store}>
+      <div>
+        <RouterProvider router={router} />
 
-      <ToastContainer position="top-center" autoClose={2000} />
-    </div>
+        <ToastContainer position="top-center" autoClose={2000} />
+      </div>
+    </Provider>
   );
 }
 

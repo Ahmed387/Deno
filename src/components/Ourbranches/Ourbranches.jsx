@@ -5,7 +5,7 @@ import img6 from "../../../public/IMG_4389_3_11zon.webp";
 import img10 from "../../../public/IMG_4431_6_11zon.webp";
 import img12 from "../../../public/IMG_4437_7_11zon.webp";
 import { Swiper } from "swiper/react";
-import styles from "./Ourbranches.module.css"; 
+import styles from "./Ourbranches.module.css";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -15,14 +15,13 @@ import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 export default function Ourbranches() {
   return (
     <>
-      <div className="flex justify-center items-center mt-10">
-        <span className="text-3xl md:text-4xl my-10 bg-blue-500 font-bold text-white px-4 py-2 rounded-lg shadow-lg">
+      <div className="flex justify-center items-center my-10">
+        <span className="text-3xl md:text-4xl  bg-blue-500 font-bold text-white px-4 py-2 rounded-lg shadow-lg">
           Our Clinic
         </span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto px-4 py-8 border-b-2 my-10 border-gray-300">
-       
         <div>
           <Swiper
             effect={"coverflow"}
@@ -87,7 +86,6 @@ export default function Ourbranches() {
           </Swiper>
         </div>
 
-   
         <div className="flex justify-center items-center">
           <video
             width="100%"

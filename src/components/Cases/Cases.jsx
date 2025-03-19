@@ -10,8 +10,8 @@ export default function Cases() {
 
   return (
     <>
-      <div className="flex justify-center items-center mt-10">
-        <span className="text-3xl md:text-4xl my-10 bg-blue-500 font-bold text-white px-4 py-2 rounded-lg shadow-lg">
+      <div className="flex justify-center items-center my-10">
+        <span className="text-3xl md:text-4xl bg-blue-500 font-bold text-white px-4 py-2 rounded-lg shadow-lg">
           Our Cases
         </span>
       </div>
